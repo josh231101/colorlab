@@ -27,5 +27,6 @@
 }
 
 .avatar {
-  background-color: brown !important;
+  background-color: transparent !important;
+  border: 2px solid white;
 }

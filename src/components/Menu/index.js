@@ -6,15 +6,15 @@ const Menu = () => {
   return (
     <ul className="topbar__menu">
       <li>
-        <Link to="/users">
-        Usuarios
+        <Link to="/colors">Busca Color</Link>
+      </li>
+      <li>
+        <Link to="/formulas">Añadir Fórmula</Link>
+      </li>
+      <li>
+        <Link to="/clients">
+        Clientes
         </Link>
-      </li>
-      <li>
-        <Link to="/products">Códigos</Link>
-      </li>
-      <li>
-        <Link to="/admins">Administradores</Link>
       </li>
     </ul>
   )

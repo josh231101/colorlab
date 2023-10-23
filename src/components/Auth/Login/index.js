@@ -43,7 +43,7 @@ const Login = ({ dispatch }) => {
           <Form.Item
             label="Email"
             name="email"
-            rules={[{ required: true, message: 'Porfavor ingresa tu correo!' }]}
+            rules={[{ required: true, message: 'Porfavor ingresa tu correo!', type: 'email' }]}
           >
             <Input />
           </Form.Item>

@@ -1,33 +1,20 @@
 import { Button, Modal } from 'antd'
-import AddUser from 'components/Forms/User/Add'
-import Users from 'components/Users'
+import ClientsSearch from 'components/Clients'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const UsersPage = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false)
-  const [newUserId, setNewUserId] = useState(null)
-  const onFinish= (newUser) => {
-    setIsModalVisible(false)
-    setNewUserId(newUser.id)
-  }
   return (
     <div>
-      <h1>Lista de Usuarios</h1>
-      <div className="mb-2">
-        <Button type="primary" onClick={() => setIsModalVisible(!isModalVisible)}>
-          Agregar nuevo usuario
-        </Button>
+      <h1>Buscar Clientes</h1>
+      <div className="w-100">
+        <Link to="/clients/add">
+          <Button type="primary" className='ml-auto mb-2'>
+            + Nuevo Cliente
+          </Button>
+        </Link>
       </div>
-      <Users newUserId={newUserId} />
-      <Modal
-        centered
-        visible={isModalVisible}
-        title="Agregar nuevo usuario"
-        footer={null}
-        onCancel={()=>setIsModalVisible(false)}
-      >
-        <AddUser onFinish={onFinish} />
-      </Modal>
+      <ClientsSearch />
     </div>
   )
 }

@@ -13,22 +13,44 @@ const routes = [
     Component: lazy(() => import('pages/auth/login')),
     exact: true,
   },
-  // Quotations
-  {
-    path : '/quotations',
-    Component: lazy(() => import('pages/Quotations')),
-    exact: true,
-  },
   // Users
   {
-    path : '/users',
+    path : '/clients',
     Component: lazy(() => import('pages/Users')),
     exact: true,
   },
-  // Products
   {
-    path : '/products',
-    Component: lazy(() => import('pages/Products')),
+    path : '/clients/search',
+    Component: lazy(() => import('pages/Users/Table')),
+    exact: true,
+  },
+  {
+    path : '/clients/add',
+    Component: lazy(() => import('pages/Users/Add')),
+    exact: true,
+  },
+  // Colors
+  {
+    path : '/colors',
+    Component: lazy(() => import('pages/Colors')),
+    exact: true,
+  },
+  // Colors
+  {
+    path : '/colors/:search',
+    Component: lazy(() => import('pages/ColorTable')),
+    exact: true,
+  },
+  // Colors
+  {
+    path : '/formulas',
+    Component: lazy(() => import('pages/Formulas')),
+    exact: true,
+  },
+  // Colors
+  {
+    path : '/formulas/:search',
+    Component: lazy(() => import('pages/Formulas/Table')),
     exact: true,
   },
   // Other

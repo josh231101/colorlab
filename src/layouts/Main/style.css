@@ -2,6 +2,7 @@
   padding: 5rem;
   margin: 0 auto;
   min-height: calc(100vh - 64px);
+  background: linear-gradient(180deg, #00014B 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .content-layout__frame{

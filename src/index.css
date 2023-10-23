@@ -1,22 +1,19 @@
-
 :root {
-  --kit-color-primary: #0B0DDF !important;
+  --kit-color-primary: rgba(0, 1, 75, 1) !important;
   --sm-max-width: 768px;
   --border: #e4e9f0;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #components-layout-demo-responsive .logo {
@@ -34,15 +31,16 @@ code {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #00014b;
 }
-
 
 /**
  BOOTSTRAPISH STYLES
 **/
 
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
 .mr-auto {
@@ -81,6 +79,52 @@ h1 {
 /**
 * OVERRIDE ANTD STYLES
 */
-.ant-layout-header{
+.ant-layout-header {
   background: var(--kit-color-primary);
+}
+
+.colorlab-grid {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 2rem;
+}
+
+.colorlab-grid__image {
+  /* set background image from folder images to contain all*/
+  width: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 560px;
+}
+
+.ant-form-item-label > label {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #00014b !important;
+}
+
+.ant-btn-primary {
+  background-color: var(--kit-color-primary);
+  border-color: var(--kit-color-primary);
+  border-radius: 24px;
+  padding-left: 42px;
+  padding-right: 42px;
+  color: #fff;
+}
+
+.ant-input {
+  background: #D4D5EC;
+}
+.input-styled {
+  border-radius: 24px;
+  background: #D4D5EC;
+  color: var(--kit-color-primary);
+}
+
+.ant-select ,.ant-select-selection, .ant-select-selector {
+  background:  #D4D5EC !important;
+  border-radius: 24px !important;
 }

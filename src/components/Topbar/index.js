@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Tooltip, Switch } from 'antd'
+import { Tooltip, Switch, Avatar } from 'antd'
 import UserMenu from 'components/Topbar/UserMenu'
 import './style.css'
 import Menu from 'components/Menu'
+import { HomeOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 
 const mapStateToProps = ({ dispatch, settings }) => ({
   dispatch,
@@ -11,7 +13,7 @@ const mapStateToProps = ({ dispatch, settings }) => ({
 })
 
 const TopBar = ({ dispatch, selectedDomain, theme }) => {
-  const setTheme = nextTheme => {
+  const setTheme = (nextTheme) => {
     dispatch({
       type: 'settings/SET_THEME',
       payload: {
@@ -34,8 +36,16 @@ const TopBar = ({ dispatch, selectedDomain, theme }) => {
   }
   return (
     <nav className="topbar">
+      <div className="mr-1">
+        <Link to="/dashboard">
+          <img src="./images/home.png" alt="Dashboard" height={24} />
+        </Link>
+      </div>
       <div className="mr-auto">
         <Menu />
+      </div>
+      <div className="logo-topbar">
+        <img src="./images/logos.png" alt="ColorLab" height={40} />
       </div>
       <div className="ml-auto">
         <UserMenu />
