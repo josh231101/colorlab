@@ -4,7 +4,7 @@ const initialState = {
   id: '',
   name: '',
   email: '',
-  authorized: process.env.REACT_APP_AUTHENTICATED || true,
+  authorized: process.env.REACT_APP_AUTHENTICATED || false,
   loading: false,
 }
 

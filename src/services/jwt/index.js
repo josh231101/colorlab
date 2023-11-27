@@ -22,7 +22,7 @@ export async function login(email, password) {
 
 export async function currentAccount() {
   return apiClient
-    .get('/api/admin/me')
+    .get('/me')
     .then(response => {
       if (response) {
         const { token } = response.data

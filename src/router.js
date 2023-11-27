@@ -53,6 +53,12 @@ const routes = [
     Component: lazy(() => import('pages/Formulas/Table')),
     exact: true,
   },
+  // Clients
+  {
+    path : '/clients/:id',
+    Component: lazy(() => import('pages/Users/Edit')),
+    exact: true,
+  },
   // Other
   {
     path: '/dashboard',

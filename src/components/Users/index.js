@@ -33,7 +33,7 @@ const columns = [
 ]
 
 const Users = ({ newUserId }) => {
-  const { response : users, loading, error } = useFetch('/api/admin/users', newUserId)
+  const { response : users, loading, error } = useFetch('/users', newUserId)
   console.log('users', users)
   return (
     <Table

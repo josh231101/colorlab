@@ -4,7 +4,7 @@ import useFetch from 'hooks/useFetch'
 import config from 'config'
 
 const Orders = ({ newOrderId }) => {
-  const { response : orders, loading, error } = useFetch('/api/admin/orders', newOrderId)
+  const { response : orders, loading, error } = useFetch('/orders', newOrderId)
   console.log('orders', orders)
   const expandablaRows = rowParent => {
     console.log('e', rowParent)

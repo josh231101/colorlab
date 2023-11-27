@@ -59,7 +59,7 @@ const AddUser = ({ onFinish = ()=>{} }) => {
     setProductStatus(true)
     setTimeout(() => {
       apiClient
-        .post('/api/admin/products', sanitizedData)
+        .post('/products', sanitizedData)
         .then((res) => {
           if (res.data) {
             message.success('New product saved')

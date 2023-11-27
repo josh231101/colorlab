@@ -7,7 +7,7 @@ import apiClient from 'services/axios'
 const willDeactivate = (_id) => {
   console.log(_id, '_id')
   apiClient
-  .post(`/api/admin/products/deactivate/${_id}`)
+  .post(`/products/deactivate/${_id}`)
   .then((res) => {
     window.location.reload()
   })
@@ -17,7 +17,7 @@ const willDeactivate = (_id) => {
 }
 const willActivate = (_id) => {
   apiClient
-  .post(`/api/admin/products/activate/${_id}`)
+  .post(`/products/activate/${_id}`)
   .then((res) => {
     window.location.reload()
   })
@@ -27,7 +27,7 @@ const willActivate = (_id) => {
 }
 
 const Products = ({ newProductId}) => {
-  const { response : products, loading, error } = useFetch('/api/admin/products', newProductId)
+  const { response : products, loading, error } = useFetch('/products', newProductId)
   console.log('products', products)
   return (
     <Table

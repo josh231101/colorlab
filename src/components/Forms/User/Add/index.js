@@ -6,7 +6,7 @@ import apiClient from 'services/axios'
 const { Option } = Select
 
 const AddUser = ({ onFinish }) => {
-  const { response: countries, loading, error } = useFetch('/api/admin/countries')
+  const { response: countries, loading, error } = useFetch('/countries')
   const [isLoadingNewUser, setUserStatus] = useState(false)
   const [form] = Form.useForm()
 
@@ -18,7 +18,7 @@ const AddUser = ({ onFinish }) => {
     setUserStatus(true)
     setTimeout(() => {
       apiClient
-        .post('/api/admin/users', { user: sanitizedData })
+        .post('/users', { user: sanitizedData })
         .then((res) => {
           if (res.data) {
             message.success('New user saved')
