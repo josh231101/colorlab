@@ -98,24 +98,24 @@ const EditUserPage = () => {
     <div>
       <h1>Información del cliente</h1>
       {/** Create a simple card with the client information from the api */}
-      <Card title="Client Information">
+      <Card title="Información del cliente">
         {clientData ? (
           <Form layout="vertical">
-            <Form.Item label="Name">
+            <Form.Item label="Nombre">
               <Input value={clientData.name} readOnly />
             </Form.Item>
-            <Form.Item label="Email">
+            <Form.Item label="Correo electrónico">
               <Input value={clientData.email} readOnly />
             </Form.Item>
-            <Form.Item label="Phone">
+            <Form.Item label="Teléfono">
               <Input value={clientData.phone} readOnly />
             </Form.Item>
-            <Form.Item label="Notes">
+            <Form.Item label="Notas">
               <Input.TextArea value={clientData.notes} readOnly />
             </Form.Item>
             <Divider />
             <div className="mb-4 w-100">
-              <h2>Client Colors</h2>
+              <h2>Colores del cliente</h2>
               <Button type="primary" className="mb-4" onClick={showAddColorModal}>
                 Asignar colores
               </Button>
